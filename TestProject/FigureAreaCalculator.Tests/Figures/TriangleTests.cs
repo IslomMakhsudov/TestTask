@@ -19,7 +19,7 @@ namespace FigureAreaCalculator.Tests.Figures
             double s = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
 
             // Then
-            Assert.Equal(s, result);
+            Assert.Equal(double.Round(s, 2), result);
         }
 
         [Fact]
