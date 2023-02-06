@@ -9,12 +9,12 @@ try
 {
     figure = figureName switch
     {
-        "triangle" => new Triangle(2, 3, 5),
+        "triangle" => new Triangle(5, 3, 5),
         "circle" => new Circle(4),
         _ => throw new KeyNotFoundException("Invalid figure type"),
     };
 }
-catch(KeyNotFoundException ex)
+catch(Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
@@ -22,11 +22,11 @@ catch(KeyNotFoundException ex)
 if(figure != null)
 {
     var figureArea = figure.CalculateArea();
-    var figureIsRightAngeleg = figure.IsRightAngled();
+    var figureIsRightAngled = figure.IsRightAngled();
 
     
     Console.WriteLine($"{figureName} area: " + figureArea);
-    Console.WriteLine($"{figureName} is right angeled: " + figureIsRightAngeleg);
+    Console.WriteLine($"{figureName} is right angled: " + figureIsRightAngled);
 }
 
 Console.ReadLine();

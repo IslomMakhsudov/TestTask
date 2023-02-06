@@ -21,7 +21,8 @@ namespace FigureAreaCalculator.Tests.Figures
 
             // Then
             var area = Math.PI * Math.Pow(radius, 2);
-            Assert.Equal(area, result);
+
+            Assert.Equal(double.Round(area, 2), result);
         }
     }
 }
